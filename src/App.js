@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import { GlobalStyle } from "./styles/Global.style";
 import Quote from "./sections/Quote";
 
