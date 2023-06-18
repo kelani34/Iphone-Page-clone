@@ -5,20 +5,24 @@ const Quote = () => {
   return (
     <QuotesSection>
       <TextBox>
-        <Text>
-          <span>Line 1</span>
+        <Text delay="0s">
+          <span>"&#8220;" You can't connect the dots looking forward;</span>
         </Text>
-        <Text>
-          <span>Line 2</span>
+        <Text delay="0.4s">
+          <span>
+            &nbsp;&nbsp;&nbsp;You can only connect them looking backward.
+          </span>
         </Text>
-        <Text>
-          <span>Line 3</span>
+        <Text delay="0.8s">
+          <span>&nbsp;&nbsp;&nbsp;So you have to trust the dots</span>
         </Text>
-        <Text>
-          <span>Line 4</span>
+        <Text delay="1.2s">
+          <span>
+            &nbsp;&nbsp;&nbsp;Will somehow connect your future . &#8221;
+          </span>
         </Text>
-        <Text>
-          <span>Line 5</span>
+        <Text delay="1.6s">
+          <span className="author">- Steve Jobs</span>
         </Text>
       </TextBox>
     </QuotesSection>
@@ -34,7 +38,7 @@ const up = keyframes`
 `;
 
 const QuotesSection = styled.section`
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   position: relative;
 
@@ -66,12 +70,18 @@ const Text = styled.p`
   span {
     position: absolute;
     transform: translateY(3rem);
-    animation: ${up} 2.5s ease forwards;
+    animation: ${up} 2.5s ease forwards ${(props) => props.delay};
 
     font-family: var(--fontl);
     background-image: linear-gradient(-45deg, var(--gradient));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .author {
+    width: 100%;
+    text-align: end;
+    background-image: linear-gradient(-180deg, var(--gradient));
   }
 `;
