@@ -19,7 +19,7 @@ const Quote = () => {
     };
   }, []);
   return (
-    <QuotesSection ref={sectionRef}>
+    <Section ref={sectionRef}>
       <TextBox>
         <Text delay="0s">
           <span>&#8220; You can't connect the dots looking forward</span>
@@ -41,7 +41,7 @@ const Quote = () => {
           <span className="author">- Steve Jobs</span>
         </Text>
       </TextBox>
-    </QuotesSection>
+    </Section>
   );
 };
 
@@ -53,7 +53,7 @@ const up = keyframes`
     }
 `;
 
-const QuotesSection = styled.section`
+const Section = styled.section`
   width: 100vw;
   height: 100vh;
   position: relative;

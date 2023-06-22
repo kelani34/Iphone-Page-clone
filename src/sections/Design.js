@@ -37,7 +37,7 @@ const Design = () => {
 
 export default Design;
 
-const Section = styled.div`
+const Section = styled.section`
   width: 100vw;
   height: 100vh;
   position: relative;

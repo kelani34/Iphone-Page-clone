@@ -4,15 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Model } from "../model/Scene";
 
-const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  background-color: transparent;
-`;
 const PhoneModel = () => {
   return (
     <Container id="phone-model">
@@ -30,3 +21,13 @@ const PhoneModel = () => {
 };
 
 export default PhoneModel;
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: transparent;
+`;
