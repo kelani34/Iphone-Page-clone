@@ -13,7 +13,6 @@ export function Model(props) {
       scrollTrigger: { trigger: "#phone-model" },
       start: "top top",
       end: "bottom+=500 bottom",
-      markers: true,
     });
 
     t1.fromTo(camera.position, { y: 2 }, { y: 0 }).fromTo(

@@ -22,7 +22,7 @@ const Quote = () => {
     <QuotesSection ref={sectionRef}>
       <TextBox>
         <Text delay="0s">
-          <span>&#8220; You can't connect the dots looking forward;</span>
+          <span>&#8220; You can't connect the dots looking forward</span>
         </Text>
         <Text delay="0.4s">
           <span>
