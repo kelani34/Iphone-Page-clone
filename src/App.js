@@ -6,6 +6,7 @@ import Design from "./sections/Design";
 import Display from "./sections/Display";
 import Processor from "./sections/Processor";
 import Battery from "./sections/Battery";
+import Color from "./sections/Color";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Display />
       <Processor />
       <Battery />
+      <Color />
     </div>
   );
 }
