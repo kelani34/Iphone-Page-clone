@@ -1,8 +1,15 @@
+import { Environment, useGLTF } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import gsap from "gsap";
 import React, { useLayoutEffect, useRef } from "react";
+import { Suspense } from "react";
 import styled from "styled-components";
 
+import { Model2 } from "../model/Scene2";
+
 const Color = () => {
+  const { materials } = useGLTF("/scene.gltf");
+
   const sectionRef = useRef(null);
   const rightRef = useRef(null);
   const leftRef = useRef(null);
@@ -15,6 +22,7 @@ const Color = () => {
     let text = textRef.current;
 
     let updateColor = (color, textp, rgbColor) => {
+      materials.Body.color.set(color);
       text.innerText = textp;
       text.style.color = color;
       right.style.backgroundColor = `rgba(${rgbColor}, 0.4)`;
@@ -81,8 +89,19 @@ const Color = () => {
   return (
     <Section ref={sectionRef}>
       <Left ref={leftRef} />
-      <Text ref={textRef}>Sierra Blue</Text>
-      <Right ref={rightRef} />
+      <Text ref={textRef} />
+      <Right ref={rightRef}>
+        {" "}
+        <Canvas camera={{ fov: 6 }}>
+          <ambientLight intensity={1} />
+          <directionalLight position={0.2} />
+          <Suspense>
+            <Model2 />
+          </Suspense>
+          <Environment preset="night" />
+          {/* <OrbitControls /> */}
+        </Canvas>
+      </Right>
     </Section>
   );
 };

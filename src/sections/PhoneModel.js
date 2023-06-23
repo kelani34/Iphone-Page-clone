@@ -8,8 +8,8 @@ const PhoneModel = () => {
   return (
     <Container id="phone-model">
       <Canvas camera={{ fov: 40 }}>
-        <ambientLight intensity={5} />
-        <directionalLight position={0.4} />
+        <ambientLight intensity={1} />
+        <directionalLight position={0.2} />
         <Suspense>
           <Model />
         </Suspense>
