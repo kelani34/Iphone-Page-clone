@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Quote />
-      {/* <PhoneModel /> */}
+      <PhoneModel />
       <Hero />
       <Design />
       <Display />
